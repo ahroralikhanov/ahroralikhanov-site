@@ -143,6 +143,7 @@ a:focus-visible{outline:2px solid #1A55A8;outline-offset:3px;border-radius:4px}
 class Component extends DCLogic {
   static initLang() {
     try { const v = window.localStorage.getItem('aa-lang'); if (v === 'en' || v === 'uz') return v; } catch (e) {}
+    try { const ls = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']); const l = String(ls[0] || '').toLowerCase(); if (l.startsWith('uz') || l.startsWith('ru')) return 'uz'; return 'en'; } catch (e) {}
     return 'uz';
   }
   static initDark() {

@@ -1,3 +1,6 @@
 # ahroralikhanov.com
 
-Static portfolio site of Ahror Alikhanov. Exported from the Claude Design canvas; deployed on Cloudflare Pages (no build step, output dir: /).
+Static portfolio site of Ahror Alikhanov, exported from the Claude Design canvas.
+
+- `public/` — the site (served as-is)
+- `wrangler.jsonc` — Cloudflare Workers static-assets config (deploy: `npx wrangler deploy`, no build step)

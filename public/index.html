@@ -65,6 +65,11 @@ a:focus-visible{outline:2px solid #1A55A8;outline-offset:3px;border-radius:4px}
 #tariflar.rvin .rv.psky{animation:rvup 1.1s cubic-bezier(.22,1,.36,1) var(--d,0ms) both,psky 12s ease-in-out infinite alternate}
 @keyframes rvup{from{opacity:0;translate:0 96px;scale:.94;filter:blur(10px)}to{opacity:1;translate:0 0;scale:1;filter:blur(0)}}
 @media (prefers-reduced-motion:reduce){#tariflar .rv{opacity:1 !important;translate:none !important;scale:none !important;animation:none !important;filter:none !important}}
+#men .rv,#men .facts > div{opacity:0;translate:0 32px}
+#men.rvin .rv,#men.rvin .facts > div{animation:rvtx 1s cubic-bezier(.22,1,.36,1) var(--d,0ms) both}
+#men .facts > div:nth-child(1){--d:520ms}#men .facts > div:nth-child(2){--d:680ms}#men .facts > div:nth-child(3){--d:840ms}#men .facts > div:nth-child(4){--d:1000ms}#men .facts > div:nth-child(5){--d:1160ms}#men .facts > div:nth-child(6){--d:1320ms}
+@keyframes rvtx{from{opacity:0;translate:0 32px;filter:blur(8px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+@media (prefers-reduced-motion:reduce){#men .rv,#men .facts > div{opacity:1 !important;translate:none !important;animation:none !important;filter:none !important}}
 @keyframes psky{from{background-position:0% 0%}to{background-position:100% 100%}}
 .pcard.psky{box-shadow:0 1px 2px rgba(0,0,0,.05)}
 .pcard.psky:hover{box-shadow:0 8px 24px rgba(0,0,0,.10)}
@@ -204,11 +209,11 @@ a:focus-visible{outline:2px solid #1A55A8;outline-offset:3px;border-radius:4px}
 </section>
 
 <!-- ABOUT (compact, Astapov) -->
-<section id="men" style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px; display: flex; flex-wrap: wrap; gap: 40px">
-<h2 style="flex: 0 0 100%; margin: 0 0 -20px; font-size: 24px; font-weight: 500; letter-spacing: -0.02em"><span class="i-uz">Men haqimda</span><span class="i-en">About</span></h2>
+<section id="men" ref="{{menRef}}" class="{{menCls}}" style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px; display: flex; flex-wrap: wrap; gap: 40px">
+<h2 class="rv" style="--d: 0ms; flex: 0 0 100%; margin: 0 0 -20px; font-size: 24px; font-weight: 500; letter-spacing: -0.02em"><span class="i-uz">Men haqimda</span><span class="i-en">About</span></h2>
 <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-size: 20px; line-height: 1.4; max-width: 560px"><span class="i-uz">Men Ahror Alikhanov — Toşkentda faoliyat yurituvçi brend dizaynerman. Asosiy yönalişlarim — brending, vizual aydentika va art-direction. Logotipdan tortib, qadoqlaş, bosma va raqamli materiallargaça bölgan yaxlit vizual tizimlar ustida işlayman.</span><span class="i-en">I’m Ahror Alikhanov, a senior graphic and brand designer based in Tashkent. My main focus is branding, visual identity and art direction. I build complete visual systems — from logos to packaging, print and digital materials.</span></p>
-<p style="margin: 0; color: var(--fg2); max-width: 520px"><span class="i-uz">Retail, tibbiyot, ta’lim, quriliş, restoran va xizmat körsatiş kabi turli sohalardagi loyihalar bilan işlaş tajribam bor. Har bir loyihada biznesning maqsadi, auditoriyasi va öziga xos xususiyatlarini tuşunişga e’tibor qarataman. Dizaynda aniq ğoya, tizimli yondaşuv, funksionallik va detallarga e’tibor muhim deb xisoblayman.</span><span class="i-en">I have experience across retail, healthcare, education, construction, restaurants and services. On every project I focus on understanding the business’s goals, audience and what makes it unique. In design, I value a clear idea, a systematic approach, functionality and attention to detail.</span></p>
+<p class="rv" style="--d: 180ms; margin: 0; font-size: 20px; line-height: 1.4; max-width: 560px"><span class="i-uz">Men Ahror Alikhanov — Toşkentda faoliyat yurituvçi brend dizaynerman. Asosiy yönalişlarim — brending, vizual aydentika va art-direction. Logotipdan tortib, qadoqlaş, bosma va raqamli materiallargaça bölgan yaxlit vizual tizimlar ustida işlayman.</span><span class="i-en">I’m Ahror Alikhanov, a senior graphic and brand designer based in Tashkent. My main focus is branding, visual identity and art direction. I build complete visual systems — from logos to packaging, print and digital materials.</span></p>
+<p class="rv" style="--d: 420ms; margin: 0; color: var(--fg2); max-width: 520px"><span class="i-uz">Retail, tibbiyot, ta’lim, quriliş, restoran va xizmat körsatiş kabi turli sohalardagi loyihalar bilan işlaş tajribam bor. Har bir loyihada biznesning maqsadi, auditoriyasi va öziga xos xususiyatlarini tuşunişga e’tibor qarataman. Dizaynda aniq ğoya, tizimli yondaşuv, funksionallik va detallarga e’tibor muhim deb xisoblayman.</span><span class="i-en">I have experience across retail, healthcare, education, construction, restaurants and services. On every project I focus on understanding the business’s goals, audience and what makes it unique. In design, I value a clear idea, a systematic approach, functionality and attention to detail.</span></p>
 
 </div>
 <dl class="facts" style="flex: 1 1 420px; margin: 0; align-self: start"><div><dt><span class="i-uz">Tajriba</span><span class="i-en">Experience</span></dt><dd><span class="i-uz">7 yil · 50+ loyiha</span><span class="i-en">7 years · 50+ projects</span></dd></div><div><dt><span class="i-uz">Yönaliş</span><span class="i-en">Focus</span></dt><dd><span class="i-uz">Brending, vizual aydentika, art-direction</span><span class="i-en">Branding, visual identity, art direction</span></dd></div><div><dt><span class="i-uz">Sohalar</span><span class="i-en">Industries</span></dt><dd><span class="i-uz">Retail, tibbiyot, ta’lim, quriliş, restoran</span><span class="i-en">Retail, healthcare, education, construction, restaurants</span></dd></div><div><dt><span class="i-uz">Joylaşuv</span><span class="i-en">Based in</span></dt><dd><span class="i-uz">Toşkent, Özbekiston</span><span class="i-en">Tashkent, Uzbekistan</span></dd></div></dl>
@@ -247,6 +252,15 @@ class Component extends DCLogic {
     this.state = { hi: -1, px: 0, py: 0, step: 0, dark: Component.initDark(), lang: Component.initLang() };
     this.procEl = null;
     this.onScroll = () => {
+      const y = window.scrollY || 0; const down = y > (this.lastY || 0); this.lastY = y;
+      if (down && !this.snapping && this.procEl && this.tarEl) {
+        const pb = this.procEl.getBoundingClientRect().bottom; const tt = this.tarEl.getBoundingClientRect().top;
+        if (pb < window.innerHeight - 2 && pb > 0 && tt > 90) {
+          this.snapping = true;
+          window.scrollTo({ top: y + tt - 80, behavior: 'smooth' });
+          clearTimeout(this.snapT); this.snapT = setTimeout(() => { this.snapping = false; this.lastY = window.scrollY; }, 1000);
+        }
+      }
       if (!this.procEl) return;
       const r = this.procEl.getBoundingClientRect();
       const stick = this.procEl.firstElementChild; const span = r.height - (stick ? stick.offsetHeight : 800);
@@ -260,14 +274,17 @@ class Component extends DCLogic {
     window.addEventListener('scroll', this.onScroll, { passive: true });
     document.addEventListener('scroll', this.onScroll, { passive: true, capture: true });
     this.onScroll();
-    try {
-      this.tarIO = new IntersectionObserver((es) => { const e = es[es.length - 1]; if (e.isIntersecting && e.intersectionRatio >= 0.25) { if (!this.state.tarIn) this.setState({ tarIn: true }); } else if (!e.isIntersecting && e.boundingClientRect.top > 0) { if (this.state.tarIn) this.setState({ tarIn: false }); } }, { threshold: [0, 0.25] });
-      if (this.tarEl) this.tarIO.observe(this.tarEl.firstElementChild ? this.tarEl.querySelector('.rv') || this.tarEl : this.tarEl);
-    } catch (e) { this.setState({ tarIn: true }); }
+    const watch = (el, key) => {
+      if (!el) return null;
+      const io = new IntersectionObserver((es) => { const e = es[es.length - 1]; if (e.isIntersecting && e.intersectionRatio >= 0.25) { if (!this.state[key]) this.setState({ [key]: true }); } else if (!e.isIntersecting && e.boundingClientRect.top > 0) { if (this.state[key]) this.setState({ [key]: false }); } }, { threshold: [0, 0.25] });
+      io.observe(el.querySelector('.rv') || el); return io;
+    };
+    try { this.tarIO = watch(this.tarEl, 'tarIn'); this.menIO = watch(this.menEl, 'menIn'); } catch (e) { this.setState({ tarIn: true, menIn: true }); }
   }
   componentWillUnmount() {
     clearInterval(this.t);
     if (this.tarIO) this.tarIO.disconnect();
+    if (this.menIO) this.menIO.disconnect();
     window.removeEventListener('scroll', this.onScroll);
     document.removeEventListener('scroll', this.onScroll, { capture: true });
   }
@@ -339,7 +356,7 @@ class Component extends DCLogic {
     const available = true;
     const avail = { availDot: available ? '#22A35A' : 'var(--fg3)', availLabel: available ? (en ? 'Available for new projects' : 'Yangi loyihalarga oçiqman') : (en ? 'Currently booked' : 'Hozir bandman') };
     const theme = { themeCls: dark ? 'dark' : '', isDark: dark, isLight: !dark, themeLabel: dark ? (en ? 'Light mode' : 'Kunduzgi rejim') : (en ? 'Dark mode' : 'Tungi rejim'), langCls: en ? 'en' : '', langLabel: en ? 'UZ' : 'EN', langAria: en ? 'Özbekçaga ötiş' : 'Switch to English', toggleLang: () => { const l = this.state.lang === 'en' ? 'uz' : 'en'; this.setState({ lang: l }); try { window.localStorage.setItem('aa-lang', l); } catch (e) {} }, toggleTheme: () => { const d = !this.state.dark; this.setState({ dark: d }); try { window.localStorage.setItem('aa-theme', d ? 'dark' : 'light'); } catch (e) {} }, heroSrc: dark ? '/assets/0f5875b7dc28b54e6735b6cd50d0fd20.mp4' : '/assets/e0e6b8f9a1831beff6876fa114d9c9b2.mp4', heroPoster: dark ? '/assets/38d5bf07141596db6c3de39c1737506e.jpg' : '/assets/964aa31f52c2cb4b7af5735f2115f11e.jpg' };
-    return { ...theme, copyLabel, copyEmail, ...avail, time, projects, clients: base.concat(base), step: steps[cur], cards, dots, procRef: (el) => { this.procEl = el; }, tarRef: (el) => { this.tarEl = el; }, tarCls: this.state.tarIn ? 'rvin' : '' };
+    return { ...theme, copyLabel, copyEmail, ...avail, time, projects, clients: base.concat(base), step: steps[cur], cards, dots, procRef: (el) => { this.procEl = el; }, tarRef: (el) => { this.tarEl = el; }, tarCls: this.state.tarIn ? 'rvin' : '', menRef: (el) => { this.menEl = el; }, menCls: this.state.menIn ? 'rvin' : '' };
   }
 }
 </script>

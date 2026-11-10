@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Ahror Alikhanov — Brend dizayner, Toshkent</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>x-dc{display:none}</style>
 <meta name="description" content="Ahror Alikhanov — Toshkentdagi brend dizayner. Logo, brending, vizual aydentika va art-direction. Narxlar va loyihalar.">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -138,8 +139,8 @@ a:focus-visible{outline:2px solid #1A55A8;outline-offset:3px;border-radius:4px}
 <sc-for list="{{projects}}" as="p" hint-placeholder-count="3">
 <a href="{{p.href}}" class="wk" style="color: var(--fg); text-decoration: none">
 <span class="wkimg" style="background: {{p.bg}}">
-<sc-if value="{{p.hasCover}}" hint-placeholder-val="{{false}}"><img src="{{p.cover}}" alt="{{p.name}} — brend mockupi" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {{p.pos}}; display: block"></sc-if>
-<sc-if value="{{p.noCover}}" hint-placeholder-val="{{true}}"><img src="{{p.logo}}" alt="{{p.name}} logotipi" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: {{p.lw}}%; height: auto; display: block"></sc-if>
+<sc-if value="{{p.hasCover}}" hint-placeholder-val="{{false}}"><img loading="lazy" src="{{p.cover}}" alt="{{p.name}} — brend mockupi" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {{p.pos}}; display: block"></sc-if>
+<sc-if value="{{p.noCover}}" hint-placeholder-val="{{true}}"><img loading="lazy" src="{{p.logo}}" alt="{{p.name}} logotipi" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: {{p.lw}}%; height: auto; display: block"></sc-if>
 <span class="wknum">({{p.num}})</span>
 <span class="wkinfo">
 <span style="display: flex; gap: 8px; flex-wrap: wrap"><sc-for list="{{p.tags}}" as="t" hint-placeholder-count="2"><span style="padding: 4px 8px; border-radius: 6px; background: var(--surface); font-size: 12px; color: var(--fg2)">{{t}}</span></sc-for></span>
